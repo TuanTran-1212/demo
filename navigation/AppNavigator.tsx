@@ -8,6 +8,7 @@ import CommunityScreen from '../screens/CommunityScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import { Ionicons } from '@react-native-vector-icons/ionicons';
 import DishDetailScreen from '../screens/DishDetailScreen';
+import MealPlanDetailScreen from '../screens/MealPlanDetailScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -25,8 +26,10 @@ const HomeStackScreen = () => (
 const MealPlansStackScreen = () => (
     <MealPlansStack.Navigator screenOptions={{headerShown:false}}>
         <MealPlansStack.Screen name="MealPlans" component={MealPlansScreen} />
+        <MealPlansStack.Screen name="MealPlanDetail" component={MealPlanDetailScreen} />
     </MealPlansStack.Navigator>
 )
+
 const CommunityStackScreen = () => (
     <CommunityStack.Navigator screenOptions={{headerShown:false}}>
         <CommunityStack.Screen name="Community" component={CommunityScreen} />

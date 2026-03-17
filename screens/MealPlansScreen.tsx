@@ -1,12 +1,4 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  ScrollView,
-  Image,
-  TouchableOpacity,
-  FlatList,
-  ActivityIndicator,
+import {StyleSheet,Text,View,ScrollView,Image,TouchableOpacity,FlatList,ActivityIndicator,
 } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
@@ -14,7 +6,7 @@ import { searchMeals, Meal } from '../services/api';
 import Ionicons from '@react-native-vector-icons/ionicons';
 
 const MealPlansScreen = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<any>();
   const [recipes, setRecipes] = useState<Meal[]>([]);
   const [loading, setLoading] = useState(true);
   const [mealPlans, setMealPlans] = useState<any[]>([]);
@@ -62,9 +54,8 @@ const MealPlansScreen = () => {
         style={styles.planCard}
       activeOpacity={0.8}
       onPress={() =>
-        navigation.navigate('MealPlans' as never)
+        navigation.navigate('MealPlanDetail', { plan: item })
       }>
-
       <Image source={{ uri: item.recipes[0]?.image}} style={styles.planImage} />
       <View style={styles.planInfo}>
         <Text style={styles.planName}>{item.name}</Text>
