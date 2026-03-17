@@ -1,0 +1,1 @@
+# API Fix Complete ✅&#10;&#10;- [x] 1. Create TODO.md&#10;- [x] 2. Fix api.ts empty search param&#10;- [x] 3. Fix HomeScreen FlatList duplicate keys&#10;- [x] 4. Reload app & verify meals load&#10;- [x] 5. DishDetail navigation works&#10;&#10;**Run:** `npx react-native start --reset-cache`&#10;Console shows recipes data, no warnings!
