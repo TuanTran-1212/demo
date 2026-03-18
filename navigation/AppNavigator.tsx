@@ -9,6 +9,7 @@ import ProfileScreen from '../screens/ProfileScreen';
 import { Ionicons } from '@react-native-vector-icons/ionicons';
 import DishDetailScreen from '../screens/DishDetailScreen';
 import MealPlanDetailScreen from '../screens/MealPlanDetailScreen';
+import LoginScreen from '../screens/LoginScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -38,6 +39,7 @@ const CommunityStackScreen = () => (
 const ProfileStackScreen = () => (
     <ProfileStack.Navigator screenOptions={{headerShown:false}}>
         <ProfileStack.Screen name="Profile" component={ProfileScreen} />
+        <ProfileStack.Screen name="Login" component={LoginScreen} />
     </ProfileStack.Navigator>
 )
 
