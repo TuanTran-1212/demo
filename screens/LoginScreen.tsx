@@ -27,7 +27,7 @@ const LoginScreen = () => {
         const url = isLogin ? '/api/login' : '/api/register';
         const body = isLogin ? { email, password } : { name, email, password };
 
-        const response = await axios.post(`http://10.0.2.2:3000${url}`, body, {
+        const response = await axios.post(`http://localhost:3000${url}`, body, {
             headers: {
                 'Content-Type': 'application/json',
             },
